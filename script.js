@@ -3,7 +3,6 @@
 const character = document.getElementById('character');
 
 const wall = document.querySelectorAll('.wallCase');
-print(wall);
 
 // obtenir la position de l'eelment "character"
 let positionX = character.offsetLeft;

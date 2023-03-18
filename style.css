@@ -49,8 +49,7 @@ body {
 
 .character {
   position: absolute;
-  top: 40px;
-  left: 208px;
+  z-index: 1;
   width: 80px;
   height: 80px;
   background-color: lightblue;
