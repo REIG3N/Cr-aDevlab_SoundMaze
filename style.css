@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: olivedrab;
+  /*
+  padding-left: 5rem;
+  padding-right: 5rem;
+  gap: 2rem;
+  */
+}
+
+.item {
+  font-weight: 700;
+  color: var(--clr-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(16, 80px);
+  grid-template-rows: repeat(8, 80px);
+  grid-auto-flow: row;
+  grid-auto-rows: 80px;
+  margin: 0 auto;
+  border: 10px solid black;
+}
+
+.groundCase {
+  background-image: url("tileset/line.png");
+}
+
+.wallCase {
+  background-image: url("tileset/wallred.png");
+}
+
+/*# sourceMappingURL=style.css.map */
