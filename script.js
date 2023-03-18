@@ -2,9 +2,9 @@
 // récupérer la div "character" par son id
 const character = document.getElementById('character');
 
-// définir la position de départ
-let positionX = 0;
-let positionY = 0;
+// obtenir la position de l'eelment "character"
+let positionX = character.offsetLeft;
+let positionY = character.offsetTop;
 
 // ajouter un écouteur d'événements pour détecter les touches fléchées
 document.addEventListener('keydown', (event) => {
@@ -12,6 +12,8 @@ document.addEventListener('keydown', (event) => {
     switch (event.key) {
         case 'ArrowLeft':
             positionX -= 80;
+            console.log(positionX);
+            console.log(positionY);
             break;
         case 'ArrowUp':
             positionY -= 80;

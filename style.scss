@@ -50,8 +50,13 @@ body {
   background-image: url("tileset/wallred.png");
 }
 .character{
+  position: absolute;
+  top : 40px ;
+  left: 208px;
   width: 80px;
   height: 80px;
-  background-color: darkcyan;
+  background-color: lightblue;
+  opacity: 0.5;
+  background-image: url("tileset/bed.png");
 }
 
