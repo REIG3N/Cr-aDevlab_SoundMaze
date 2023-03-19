@@ -28,38 +28,38 @@ return false;
 }
 
 // ajouter un écouteur d'événements pour détecter les touches fléchées
-document.addEventListener('keydown', (event) => {
-    // déplacer la div selon la touche appuyée
-    switch (event.key) {
+// document.addEventListener('keydown', (event) => {
+//     // déplacer la div selon la touche appuyée
+//     switch (event.key) {
 
         
-        case 'ArrowLeft':
-            positionX -= 80;
-            console.log(positionX +  " positionX");
-            console.log(positionY + " positionY");
-            break;
-        case 'ArrowUp':
-            positionY -= 80;
-            console.log(positionX + " positionX");
-            console.log(positionY + " positionY");
-            break;
-        case 'ArrowRight':
-            positionX += 80;
-            console.log(positionX + " positionX");
-            console.log(positionY + " positionY");
-            break;
-        case 'ArrowDown':
-            positionY += 80;
-            console.log(positionX + " positionX");
-            console.log(positionY + " positionY");
-            break;
-        default:
-            break;
-    }
-    // mettre à jour la position de la div
-    character.style.top = positionY + 'px';
-    character.style.left = positionX + 'px';
-});
+//         case 'ArrowLeft':
+//             positionX -= 80;
+//             console.log(positionX +  " positionX");
+//             console.log(positionY + " positionY");
+//             break;
+//         case 'ArrowUp':
+//             positionY -= 80;
+//             console.log(positionX + " positionX");
+//             console.log(positionY + " positionY");
+//             break;
+//         case 'ArrowRight':
+//             positionX += 80;
+//             console.log(positionX + " positionX");
+//             console.log(positionY + " positionY");
+//             break;
+//         case 'ArrowDown':
+//             positionY += 80;
+//             console.log(positionX + " positionX");
+//             console.log(positionY + " positionY");
+//             break;
+//         default:
+//             break;
+//     }
+//     // mettre à jour la position de la div
+//     character.style.top = positionY + 'px';
+//     character.style.left = positionX + 'px';
+// });
 
 
 // ajout du code de ml5.js
@@ -67,12 +67,12 @@ document.addEventListener('keydown', (event) => {
 console.log("ml5 version:", ml5.version);
 
 // Initialize a sound classifier method with SpeechCommands18w model. A callback needs to be passed.
-let classifier;
-// Options for the SpeechCommands18w model, the default probabilityThreshold is 0
-const options = { probabilityThreshold: 0.9 };
+const classifier = ml5.soundClassifier("SpeechCommands18w", modelReady);
+
+// Options for the SpeechCommands18w model, the default probabilityThreshold is 85
+const options = { probabilityThreshold: 0.85 };
 // Two variable to hold the label and confidence of the result
-let label;
-let confidence;
+
 
 function preload() {
   // Load SpeechCommands18w sound classifier model
@@ -82,11 +82,16 @@ function preload() {
 function setup() {
   noCanvas();
   // Create 'label' and 'confidence' div to hold results
-  label = createDiv('Label: ...');
-  confidence = createDiv('Confidence: ...');
+  
   // Classify the sound from microphone in real time
   classifier.classify(gotResult);
 }
+
+function modelReady() {
+  // classify sound
+  classifier.classify(gotResult);
+}
+
 
 // A function to run when we get any errors and the results
 function gotResult(error, results) {
@@ -95,8 +100,35 @@ function gotResult(error, results) {
     console.error(error);
   }
   // The results are in an array ordered by confidence.
-  console.log(results[0]);
+    
+    console.log(results[0]);
+    return results[0];
+    
   // Show the first label and confidence
-  label.html('Label: ' + results[0].label);
-  confidence.html('Confidence: ' + nf(results[0].confidence, 0, 2)); // Round the confidence to 0.01
+ 
 }
+
+
+function deplacement() {
+  if (gotResult() == "left") {
+    positionX -= 80;
+    console.log(positionX + " positionX");
+    console.log(positionY + " positionY");
+  } else if (gotResult() == "up") {
+    positionY -= 80;
+    console.log(positionX + " positionX");
+    console.log(positionY + " positionY");
+  } else if (gotResult() == "right") {
+    positionX += 80;
+    console.log(positionX + " positionX");
+    console.log(positionY + " positionY");
+  } else if (gotResult() == "down") {
+    positionY += 80;
+    console.log(positionX + " positionX");
+    console.log(positionY + " positionY");
+  } else {
+    console.log(gotResult() + " pas de déplacement");
+  }
+}
+
+deplacement();
