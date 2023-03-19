@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: Poppins;
 }
+
 body {
   display: flex;
   justify-content: center;
@@ -15,7 +16,6 @@ body {
   padding-right: 5rem;
   gap: 2rem;
   */
-
 }
 
 .item {
@@ -25,19 +25,19 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-
   background-repeat: no-repeat;
   background-size: cover;
 }
-.container{
+
+.container {
   display: grid;
-  grid-template-columns: repeat(16, 80px) ;
-  grid-template-rows:  repeat(8, 80px);
+  grid-template-columns: repeat(16, 80px);
+  grid-template-rows: repeat(8, 80px);
   grid-auto-flow: row;
   grid-auto-rows: 80px;
-
   margin: 0 auto;
   border: 10px solid black;
+<<<<<<< HEAD
 }
 .item_127 {
 }
@@ -53,9 +53,35 @@ body {
   position: absolute;
   top : 40px ;
   left: 208px;
+=======
+  position: relative;
+}
+
+.groundCase {
+  background-image: url("tileset/line.png");
+}
+
+.wallCase {
+  background-image: url("tileset/wallred.png");
+}
+
+.character {
+  position: absolute;
+  top: 40px;
+  left: 208px;
+  z-index: 1;
+>>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
   width: 80px;
   height: 80px;
   background-color: lightblue;
   opacity: 0.5;
   background-image: url("tileset/bed.png");
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+/*# sourceMappingURL=style.scss.map */
+>>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd

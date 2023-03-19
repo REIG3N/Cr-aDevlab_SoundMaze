@@ -20,6 +20,7 @@ body {
 
 .item {
   font-weight: 700;
+  color: var(--clr-light);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,6 +38,7 @@ body {
   position: relative;
   margin: 0 auto;
   border: 10px solid black;
+  position: relative;
 }
 .item_127 {
 }
@@ -48,15 +50,26 @@ body {
 .wallCase{
   background-image: url("tileset/wallred.png");
 }
+<<<<<<< HEAD
 .character{
   position: absolute;
   top : 40px ;
   left: 208px;
+=======
+
+.character {
+  position: absolute;
+  top: 40px;
+  left: 208px;
+  z-index: 1;
+>>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
   width: 80px;
   height: 80px;
   background-color: lightblue;
   opacity: 0.5;
   background-image: url("tileset/bed.png");
 }
+
+
 
 /*# sourceMappingURL=style.css.map */
