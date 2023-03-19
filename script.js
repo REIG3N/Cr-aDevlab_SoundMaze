@@ -3,7 +3,11 @@
 const character = document.getElementById('character');
 
 const wall = document.querySelectorAll('.wallCase');
-print(wall);
+
+const container = document.getElementById("maze");
+// affiche la position du container par rapport à la fenêtre
+console.log(container.getBoundingClientRect());
+
 
 // obtenir la position de l'eelment "character"
 let positionX = character.offsetLeft;
