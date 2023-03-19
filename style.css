@@ -37,6 +37,7 @@ body {
   grid-auto-rows: 80px;
   margin: 0 auto;
   border: 10px solid black;
+  position: relative;
 }
 
 .groundCase {
