@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: Poppins;
 }
-
 body {
   display: flex;
   justify-content: center;
@@ -16,6 +15,7 @@ body {
   padding-right: 5rem;
   gap: 2rem;
   */
+
 }
 
 .item {
@@ -24,35 +24,39 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.container {
+.container{
   display: grid;
-  grid-template-columns: repeat(16, 80px);
-  grid-template-rows: repeat(8, 80px);
+  grid-template-columns: repeat(16, 80px) ;
+  grid-template-rows:  repeat(8, 80px);
   grid-auto-flow: row;
   grid-auto-rows: 80px;
+  position: relative;
   margin: 0 auto;
   border: 10px solid black;
 }
-
-.groundCase {
+.item_127 {
+}
+.item_2 {
+}
+.groundCase{
   background-image: url("tileset/line.png");
 }
-
-.wallCase {
+.wallCase{
   background-image: url("tileset/wallred.png");
 }
 .character{
+  position: absolute;
+  top : 40px ;
+  left: 208px;
   width: 80px;
   height: 80px;
-  background-color: darkcyan;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  position: absolute;
+  background-color: lightblue;
+  opacity: 0.5;
+  background-image: url("tileset/bed.png");
 }
 
 /*# sourceMappingURL=style.css.map */
