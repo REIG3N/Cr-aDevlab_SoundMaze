@@ -11,15 +11,11 @@ function getPositionCaracter(ligne, colonne){
 }
 
 function setPositionCarracter(ligne, colonne){
-<<<<<<< HEAD
    let newPosition = getPositionCaracter(ligne, colonne);
    character.style.top = newPosition.positionTop + 'px';
    character.style.left = newPosition.positionLeft + 'px';
-=======
-    let newPosition = getPositionCaracter(ligne, colonne);
-    character.style.top = newPosition.positionTop + 'px';
-    character.style.left = newPosition.positionLeft + 'px';
->>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
+
+
 }
 
 setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
@@ -34,15 +30,12 @@ document.addEventListener('keydown', (event) => {
             let key = ".item_" + currentLigneCaracter + "" + currentColonneCaracter;
             let elt = document.querySelector(key);
             if(elt != null && elt.classList.contains("groundCase")){
-<<<<<<< HEAD
+
                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
             }else{
                currentColonneCaracter += 1;
-=======
-                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
-            }else{
-                currentColonneCaracter += 1;
->>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
+
+
             }
             break;
         }
@@ -51,15 +44,12 @@ document.addEventListener('keydown', (event) => {
             let key = ".item_" + currentLigneCaracter + "" + currentColonneCaracter;
             let elt = document.querySelector(key);
             if(elt != null && elt.classList.contains("groundCase")){
-<<<<<<< HEAD
+
                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
             }else{
                currentLigneCaracter += 1;
-=======
-                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
-            }else{
-                currentLigneCaracter += 1;
->>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
+
+
             }
             break;
         }
@@ -68,15 +58,12 @@ document.addEventListener('keydown', (event) => {
             let key = ".item_" + currentLigneCaracter + "" + currentColonneCaracter;
             let elt = document.querySelector(key);
             if(elt != null && elt.classList.contains("groundCase")){
-<<<<<<< HEAD
+
                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
             }else{
                currentColonneCaracter -= 1;
-=======
-                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
-            }else{
-                currentColonneCaracter -= 1;
->>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
+
+
             }
             break;
         }
@@ -85,15 +72,12 @@ document.addEventListener('keydown', (event) => {
             let key = ".item_" + currentLigneCaracter + "" + currentColonneCaracter;
             let elt = document.querySelector(key);
             if(elt != null && elt.classList.contains("groundCase")){
-<<<<<<< HEAD
+
                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
             }else{
                currentLigneCaracter -= 1;
-=======
-                setPositionCarracter(currentLigneCaracter, currentColonneCaracter);
-            }else{
-                currentLigneCaracter -= 1;
->>>>>>> 2cbfba43d65775379d088c40f664e2c95566f8dd
+
+
             }
             break;
         }
