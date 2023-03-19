@@ -20,7 +20,6 @@ body {
 
 .item {
   font-weight: 700;
-  color: var(--clr-light);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,12 +49,8 @@ body {
 .wallCase{
   background-image: url("tileset/wallred.png");
 }
-<<<<<<< HEAD
-.character{
-  position: absolute;
-  top : 40px ;
-  left: 208px;
-=======
+
+
 
 .character {
   position: absolute;
