@@ -58,7 +58,9 @@ function gotResult(error, results) {
           } else {
             currentColonneCaracter += 1;
           }
-          break;
+              character.style.backgroundImage = "url('tileset/tile001.png')";
+
+              break;
         }
           case "up": {
               console.log(results[0].label);
@@ -75,7 +77,9 @@ function gotResult(error, results) {
               
             currentLigneCaracter += 1;
           }
-          break;
+              character.style.backgroundImage = "url('tileset/tile003.png')";
+
+              break;
         }
           case "right": {
               console.log(results[0].label);
@@ -89,7 +93,8 @@ function gotResult(error, results) {
           } else {
             currentColonneCaracter -= 1;
           }
-          break;
+          character.style.backgroundImage = "url('tileset/tile002.png')";
+              break;
         }
           case "down": {
               console.log(results[0].label);
@@ -104,9 +109,11 @@ function gotResult(error, results) {
             currentLigneCaracter -= 1;
           }
           break;
-        }
+              character.style.backgroundImage = "url('tileset/tile000.png')";
+          }
         default:
-              break;
+            character.style.backgroundImage = "url('tileset/tile000.png')";
+            break;
           
       }
     }
